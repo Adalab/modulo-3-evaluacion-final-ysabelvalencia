@@ -1,8 +1,16 @@
-# React + Vite
+# Owen Wilson's Wow
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-Currently, two official plugins are available:
+Hey there! Welcome to the "Owen Wilson's Wow " website! 
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+This website is a tribute to the renowned actor Owen Wilson and his iconic catchphrase "Wow." 
+
+
+## How to Use:
+- Access the Website: Visit the "Owen Wilson's Wow Compilation" and enjoy a collection of 50 movies featuring Owen Wilson and his memorable "Wow" moments.
+
+- Browse the Compilation: Scroll through the list of movies to see which ones include Owen Wilson's famous "Wow" line.
+
+- Filter Movies: Use the search bar to search for specific movie titles or filter movies by release year.
+
+- Enjoy the Wow Moments: Click on a movie to view Owen Wilson's "Wow" moment from that film.
