@@ -1,7 +1,13 @@
-import FilterByYear from './FIlterByYear';
+import FilterByYear from './FilterByYear';
 import FilterByTitle from './FilterByTitle';
 
-const Filters = ({ titleFilter, handleChangeInput }) => {
+const Filters = ({
+  titleFilter,
+  handleChangeInput,
+  yearFilter,
+  handleChangeSelect,
+  years,
+}) => {
   return (
     <form onSubmit={(ev) => ev.preventDefault()}>
       <FilterByTitle
@@ -9,7 +15,11 @@ const Filters = ({ titleFilter, handleChangeInput }) => {
         handleChangeInput={handleChangeInput}
       />
 
-      <FilterByYear />
+      <FilterByYear
+        yearFilter={yearFilter}
+        handleChangeSelect={handleChangeSelect}
+        years={years}
+      />
     </form>
   );
 };

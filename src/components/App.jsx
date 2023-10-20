@@ -14,6 +14,8 @@ const App = () => {
 
   const [titleFilter, setTitleFilter] = useState('');
 
+  const [yearFilter, setYearFilter] = useState('');
+
   useEffect(() => {
     if (allMovies.length === 0) {
       getDataFromApi().then((cleanData) => {
@@ -27,9 +29,26 @@ const App = () => {
     setTitleFilter(value);
   };
 
-  const filteredMovies = allMovies.filter((movie) =>
-    movie.movie.toLowerCase().includes(titleFilter.toLowerCase())
-  );
+  const handleChangeSelect = (value) => {
+    setYearFilter(value);
+  };
+
+  const filteredMovies = allMovies
+    .filter((eachMovie) => eachMovie.movie.toLowerCase().includes(titleFilter))
+    .filter((eachMovie) => {
+      if (yearFilter === '') {
+        return true;
+      } else {
+        return yearFilter === eachMovie.year.toString();
+      }
+    });
+
+  const getYears = () => {
+    const years = allMovies.map((eachMovie) => eachMovie.year);
+    const uniquesYears = new Set(years);
+    const uniquesArray = [...uniquesYears];
+    return uniquesArray;
+  };
 
   return (
     <>
@@ -42,7 +61,10 @@ const App = () => {
               <>
                 <Filters
                   titleFilter={titleFilter}
+                  yearFilter={yearFilter}
                   handleChangeInput={handleChangeInput}
+                  handleChangeSelect={handleChangeSelect}
+                  years={getYears()}
                 />
 
                 <MovieSceneList allMovies={filteredMovies} />
