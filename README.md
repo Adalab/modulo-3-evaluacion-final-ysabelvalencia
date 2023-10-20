@@ -3,7 +3,7 @@
 
 Hey there! Welcome to the "Owen Wilson's Wow " website! 
 
-This website is a tribute to the renowned actor Owen Wilson and his iconic catchphrase "Wow." 
+This website is a tribute to the renowned american actor Owen Wilson and his iconic catchphrase "Wow." 
 
 
 ## How to Use:
