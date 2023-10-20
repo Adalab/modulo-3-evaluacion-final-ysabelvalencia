@@ -4,8 +4,9 @@ const callToApi = () => {
   )
     .then((response) => response.json())
     .then((data) => {
-      const cleanData = data.map((data) => {
+      const cleanData = data.map((data, index) => {
         return {
+          id: index,
           movie: data.movie,
           year: data.year,
           director: data.director,
