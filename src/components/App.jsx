@@ -34,7 +34,9 @@ const App = () => {
   };
 
   const filteredMovies = allMovies
-    .filter((eachMovie) => eachMovie.movie.toLowerCase().includes(titleFilter))
+    .filter((eachMovie) =>
+      eachMovie.movie.toLowerCase().includes(titleFilter.toLowerCase())
+    )
     .filter((eachMovie) => {
       if (yearFilter === '') {
         return true;
