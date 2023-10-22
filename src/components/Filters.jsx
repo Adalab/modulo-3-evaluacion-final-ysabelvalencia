@@ -7,7 +7,12 @@ const Filters = ({
   yearFilter,
   handleChangeSelect,
   years,
+  handleResetButton,
 }) => {
+  const handleReset = (ev) => {
+    handleResetButton('');
+  };
+
   return (
     <form onSubmit={(ev) => ev.preventDefault()}>
       <FilterByTitle
@@ -21,7 +26,7 @@ const Filters = ({
         years={years}
       />
 
-      <button>Reset</button>
+      <button onClick={handleReset}>Reset</button>
     </form>
   );
 };

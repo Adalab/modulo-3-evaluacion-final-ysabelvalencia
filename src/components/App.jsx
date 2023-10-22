@@ -42,6 +42,11 @@ const App = () => {
     setYearFilter(value);
   };
 
+  const handleResetButton = (value) => {
+    setTitleFilter(value);
+    setYearFilter('');
+  };
+
   const filteredMovies = allMovies
     .filter((eachMovie) =>
       eachMovie.movie.toLowerCase().includes(titleFilter.toLowerCase())
@@ -68,8 +73,6 @@ const App = () => {
 
   const selectedMovie = allMovies.find((item) => item.id === parseInt(movieId));
 
-  console.log(`Clicked: ${selectedMovie}`);
-
   return (
     <>
       <header>Owen Wilson's Wow</header>
@@ -85,6 +88,7 @@ const App = () => {
                   handleChangeInput={handleChangeInput}
                   handleChangeSelect={handleChangeSelect}
                   years={getYears()}
+                  handleResetButton={handleResetButton}
                 />
 
                 <MovieSceneList
