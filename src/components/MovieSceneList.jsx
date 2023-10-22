@@ -1,18 +1,29 @@
 import MovieSceneItem from './MovieSceneItem';
 
-const MovieSceneList = ({ allMovies, titleFilter }) => {
-  if (allMovies.length === 0) {
-    return (
-      <li>
-        <p>
-          No hay ningun nombre de película que coincida con la palabra "
-          {titleFilter}".
-        </p>
-      </li>
-    );
+const MovieSceneList = ({ filteredMovies, titleFilter, yearFilter }) => {
+  if (filteredMovies.length === 0) {
+    if (titleFilter !== '' && yearFilter === '') {
+      return (
+        <section>
+          <p>
+            No hay coincidencias entre la palabra "{titleFilter}" y el año
+            seleccionado.
+          </p>
+        </section>
+      );
+    } else {
+      return (
+        <section>
+          <p>
+            No hay ninguna película que coincida con la palabra "{titleFilter}"
+            y el año seleccionado.
+          </p>
+        </section>
+      );
+    }
   }
 
-  const renderAllMovies = allMovies.map((movie) => {
+  const renderAllMovies = filteredMovies.map((movie) => {
     return (
       <li key={movie.id}>
         <MovieSceneItem movie={movie} />

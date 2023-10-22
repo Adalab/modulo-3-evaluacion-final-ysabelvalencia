@@ -2,7 +2,7 @@ import '../styles/App.scss';
 import getDataFromApi from '../services/api';
 import localStorage from '../services/localStorage';
 import { useEffect, useState } from 'react';
-import { Routes, Route } from 'react-router-dom';
+import { Routes, Route, Link } from 'react-router-dom';
 import { useLocation, matchPath } from 'react-router';
 import Filters from './Filters';
 import MovieSceneList from './MovieSceneList';
@@ -94,8 +94,9 @@ const App = () => {
                 />
 
                 <MovieSceneList
-                  allMovies={filteredMovies}
+                  filteredMovies={filteredMovies}
                   titleFilter={titleFilter}
+                  yearFilter={yearFilter}
                 />
               </>
             }
@@ -106,7 +107,17 @@ const App = () => {
             element={<MovieSceneDetail selectedMovie={selectedMovie} />}
           />
 
-          <Route path="/*" element={<p>La ruta indicada no existe</p>} />
+          <Route
+            path="/*"
+            element={
+              <>
+                <p>
+                  Upps! Parece que la ruta que has introducido no es correcta.
+                </p>
+                <Link to="/">Volver al Inicio</Link>
+              </>
+            }
+          />
         </Routes>
       </main>
     </>
