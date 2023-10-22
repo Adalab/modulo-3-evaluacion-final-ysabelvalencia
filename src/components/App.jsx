@@ -21,6 +21,7 @@ const App = () => {
   useEffect(() => {
     if (allMovies.length === 0) {
       getDataFromApi().then((cleanData) => {
+        cleanData.sort((a, b) => a.movie.localeCompare(b.movie));
         setAllMovies(cleanData);
       });
     }
