@@ -77,7 +77,7 @@ const App = () => {
 
   return (
     <>
-      <header>Owen Wilson's Wow</header>
+      <header className="header"></header>
       <main>
         <Routes>
           <Route

@@ -6,18 +6,15 @@ const MovieSceneList = ({ filteredMovies, titleFilter, yearFilter }) => {
     if (titleFilter !== '' && yearFilter === '') {
       return (
         <section>
-          <p>
-            No hay coincidencias entre la palabra "{titleFilter}" y el año
-            seleccionado.
-          </p>
+          <p>No hay coincidencias entre la palabra "{titleFilter}".</p>
         </section>
       );
     } else {
       return (
         <section>
           <p>
-            No hay ninguna película que coincida con la palabra "{titleFilter}"
-            y el año seleccionado.
+            No hay ninguna película que coincida con la palabra "{titleFilter}"y
+            el año seleccionado.
           </p>
         </section>
       );
