@@ -123,6 +123,9 @@ const App = () => {
           />
         </Routes>
       </main>
+      <footer className="footer">
+        <div className="footer__div">Owen Wilson's "Wow!" ©2023</div>
+      </footer>
     </>
   );
 };

@@ -1,0 +1,8 @@
+@import '../core/Variables.scss';
+@import '../core/Mixins.scss';
+
+.search-year {
+  border: 0.1rem solid red;
+  // padding: 1rem;
+  @include dflex(row, center, flex-end, none);
+}

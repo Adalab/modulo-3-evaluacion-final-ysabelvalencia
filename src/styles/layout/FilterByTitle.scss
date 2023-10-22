@@ -1,0 +1,13 @@
+@import '../core/Variables.scss';
+@import '../core/Mixins.scss';
+
+.search-film {
+  @include dflex(column, center, center, 0.5rem);
+
+  &__input {
+    padding: 0.5rem;
+    text-align: center;
+    @include fonts(1.5rem, rgb(237, 155, 4), none);
+    border-radius: 1rem;
+  }
+}

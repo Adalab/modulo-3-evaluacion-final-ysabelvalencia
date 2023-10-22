@@ -1,4 +1,5 @@
 import PropTypes from 'prop-types';
+import '../styles/layout/FilterByTitle.scss';
 
 const FilterByTitle = ({ titleFilter, handleChangeInput }) => {
   const handleInput = (ev) => {
@@ -6,13 +7,15 @@ const FilterByTitle = ({ titleFilter, handleChangeInput }) => {
   };
 
   return (
-    <label htmlFor="search-film">
+    <label className="search-film" htmlFor="search-film">
       Título de la película
       <input
+        className="search-film__input"
         type="text"
         name="search-film"
         value={titleFilter}
         id="search-film"
+        placeholder="Ej: Cars"
         onChange={handleInput}
       />
     </label>

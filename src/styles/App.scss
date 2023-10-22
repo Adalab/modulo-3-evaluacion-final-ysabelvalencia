@@ -9,6 +9,9 @@
 htlm {
   font-size: 62.5%;
 }
+.body {
+  background-color: #539baa;
+}
 
 .header {
   background-image: url('../images/owen-paris.jpg');
@@ -39,5 +42,15 @@ htlm {
     display: flex;
     justify-content: end;
     align-items: end;
+  }
+}
+
+.footer {
+  background-color: #044978;
+  font-family: $font-josefin;
+  font-size: 1rem;
+
+  &__div {
+    padding: 3rem;
   }
 }

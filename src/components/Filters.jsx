@@ -1,6 +1,7 @@
 import FilterByYear from './FilterByYear';
 import FilterByTitle from './FilterByTitle';
 import PropTypes from 'prop-types';
+import '../styles/layout/Filters.scss';
 
 const Filters = ({
   titleFilter,
@@ -15,7 +16,7 @@ const Filters = ({
   };
 
   return (
-    <form onSubmit={(ev) => ev.preventDefault()}>
+    <form className="form" onSubmit={(ev) => ev.preventDefault()}>
       <FilterByTitle
         titleFilter={titleFilter}
         handleChangeInput={handleChangeInput}
@@ -27,7 +28,9 @@ const Filters = ({
         years={years}
       />
 
-      <button onClick={handleReset}>Reset</button>
+      <button className="form__button" onClick={handleReset}>
+        Reset
+      </button>
     </form>
   );
 };

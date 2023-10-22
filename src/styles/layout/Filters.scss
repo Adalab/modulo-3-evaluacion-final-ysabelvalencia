@@ -1,0 +1,15 @@
+@import '../core/Variables.scss';
+@import '../core/Mixins.scss';
+
+.form {
+  padding: 1rem;
+  @include dflex(column, center, center, 1rem);
+  @include fonts(1.5rem, white, none);
+
+  &__button {
+    padding: 0.5rem;
+    border-radius: 2rem;
+    background-color: #052b44;
+    @include fonts(1rem, white, none);
+  }
+}
