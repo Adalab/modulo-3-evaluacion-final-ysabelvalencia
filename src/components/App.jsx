@@ -21,7 +21,6 @@ const App = () => {
   useEffect(() => {
     if (allMovies.length === 0) {
       getDataFromApi().then((cleanData) => {
-        cleanData.sort((a, b) => a.movie.localeCompare(b.movie));
         setAllMovies(cleanData);
       });
     }
@@ -59,6 +58,8 @@ const App = () => {
         return yearFilter === eachMovie.year.toString();
       }
     });
+
+  filteredMovies.sort((a, b) => a.movie.localeCompare(b.movie));
 
   const getYears = () => {
     const years = allMovies.map((eachMovie) => eachMovie.year);
@@ -104,6 +105,8 @@ const App = () => {
             path="/movie/:id"
             element={<MovieSceneDetail selectedMovie={selectedMovie} />}
           />
+
+          <Route path="/*" element={<p>La ruta indicada no existe</p>} />
         </Routes>
       </main>
     </>

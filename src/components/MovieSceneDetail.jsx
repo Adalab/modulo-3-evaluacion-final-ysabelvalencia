@@ -1,6 +1,15 @@
 import { Link } from 'react-router-dom';
 
 const MovieSceneDetail = ({ selectedMovie }) => {
+  if (!selectedMovie) {
+    return (
+      <div>
+        <p>La escena que buscas no existe</p>
+        <Link to="/">Volver</Link>
+      </div>
+    );
+  }
+
   return (
     <section>
       <img
