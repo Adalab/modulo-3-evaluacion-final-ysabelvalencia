@@ -14,23 +14,28 @@ const App = () => {
   );
 
   const [titleFilter, setTitleFilter] = useState(
-    localStorage.get('inputSearchLS', '')
+    localStorage.get('titleFilterLS', '')
   );
-
   const [yearFilter, setYearFilter] = useState('');
 
   useEffect(() => {
     if (allMovies.length === 0) {
       getDataFromApi().then((cleanData) => {
         setAllMovies(cleanData);
-        localStorage.set('allMoviesLS', cleanData);
       });
     }
   }, []);
 
+  useEffect(() => {
+    localStorage.set('allMoviesLS', allMovies);
+  }, [allMovies]);
+
+  useEffect(() => {
+    localStorage.set('titleFilterLS', titleFilter);
+  }, [titleFilter]);
+
   const handleChangeInput = (value) => {
     setTitleFilter(value);
-    localStorage.set('inputSearchLS', titleFilter);
   };
 
   const handleChangeSelect = (value) => {
@@ -51,9 +56,9 @@ const App = () => {
 
   const getYears = () => {
     const years = allMovies.map((eachMovie) => eachMovie.year);
-    const uniquesYears = new Set(years);
-    const uniquesArray = [...uniquesYears];
-    return uniquesArray;
+    const listOfYears = new Set(years);
+    const uniquesYearsArray = [...listOfYears];
+    return uniquesYearsArray;
   };
 
   const { pathname } = useLocation();
