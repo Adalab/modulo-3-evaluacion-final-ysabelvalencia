@@ -1,9 +1,10 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const MovieSceneItem = ({ movie }) => {
   return (
     <>
-      <a href="#">
+      <Link to={`/movie/${movie.id}`}>
         <img
           src={movie.poster}
           alt={movie.movie}
@@ -13,7 +14,7 @@ const MovieSceneItem = ({ movie }) => {
         <p>{movie.movie}</p>
         <p>{movie.fullLine}</p>
         <p>{movie.year}</p>
-      </a>
+      </Link>
     </>
   );
 };

@@ -2,17 +2,20 @@ import '../styles/App.scss';
 import getDataFromApi from '../services/api';
 import localStorage from '../services/localStorage';
 import { useEffect, useState } from 'react';
-import { Routes, Route, Link } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
 import { useLocation, matchPath } from 'react-router';
 import Filters from './Filters';
 import MovieSceneList from './MovieSceneList';
+import MovieSceneDetail from './MovieSceneDetail';
 
 const App = () => {
   const [allMovies, setAllMovies] = useState(
     localStorage.get('allMoviesLS', [])
   );
 
-  const [titleFilter, setTitleFilter] = useState('');
+  const [titleFilter, setTitleFilter] = useState(
+    localStorage.get('inputSearchLS', '')
+  );
 
   const [yearFilter, setYearFilter] = useState('');
 
@@ -27,6 +30,7 @@ const App = () => {
 
   const handleChangeInput = (value) => {
     setTitleFilter(value);
+    localStorage.set('inputSearchLS', titleFilter);
   };
 
   const handleChangeSelect = (value) => {
@@ -52,6 +56,15 @@ const App = () => {
     return uniquesArray;
   };
 
+  const { pathname } = useLocation();
+  const routeData = matchPath('/movie/:id', pathname);
+
+  const movieId = routeData !== null ? routeData.params.id : null;
+
+  const selectedMovie = allMovies.find((item) => item.id === parseInt(movieId));
+
+  console.log(`Clicked: ${selectedMovie}`);
+
   return (
     <>
       <header>Owen Wilson's Wow</header>
@@ -69,9 +82,17 @@ const App = () => {
                   years={getYears()}
                 />
 
-                <MovieSceneList allMovies={filteredMovies} />
+                <MovieSceneList
+                  allMovies={filteredMovies}
+                  titleFilter={titleFilter}
+                />
               </>
             }
+          />
+
+          <Route
+            path="/movie/:id"
+            element={<MovieSceneDetail selectedMovie={selectedMovie} />}
           />
         </Routes>
       </main>

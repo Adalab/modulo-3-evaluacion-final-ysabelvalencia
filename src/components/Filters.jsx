@@ -20,6 +20,8 @@ const Filters = ({
         handleChangeSelect={handleChangeSelect}
         years={years}
       />
+
+      <button>Reset</button>
     </form>
   );
 };
