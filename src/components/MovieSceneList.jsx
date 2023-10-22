@@ -13,8 +13,8 @@ const MovieSceneList = ({ filteredMovies, titleFilter, yearFilter }) => {
       return (
         <section>
           <p>
-            No hay ninguna película que coincida con la palabra "{titleFilter}"y
-            el año seleccionado.
+            No hay ninguna película que coincida con la palabra "{titleFilter}"
+            y el año seleccionado.
           </p>
         </section>
       );
