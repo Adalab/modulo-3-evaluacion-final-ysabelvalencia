@@ -1,4 +1,5 @@
 import MovieSceneItem from './MovieSceneItem';
+import PropTypes from 'prop-types';
 
 const MovieSceneList = ({ filteredMovies, titleFilter, yearFilter }) => {
   if (filteredMovies.length === 0) {
@@ -36,6 +37,16 @@ const MovieSceneList = ({ filteredMovies, titleFilter, yearFilter }) => {
       <ul>{renderAllMovies}</ul>
     </section>
   );
+};
+
+MovieSceneList.propTypes = {
+  filteredMovies: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.number.isRequired,
+    })
+  ).isRequired,
+  titleFilter: PropTypes.string.isRequired,
+  yearFilter: PropTypes.string.isRequired,
 };
 
 export default MovieSceneList;

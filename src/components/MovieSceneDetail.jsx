@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import PropTypes from 'prop-types';
 
 const MovieSceneDetail = ({ selectedMovie }) => {
   if (!selectedMovie) {
@@ -34,6 +35,17 @@ const MovieSceneDetail = ({ selectedMovie }) => {
       <Link to="/">Volver</Link>
     </section>
   );
+};
+
+MovieSceneDetail.propTypes = {
+  selectedMovie: PropTypes.shape({
+    id: PropTypes.number.isRequired,
+    movie: PropTypes.string.isRequired,
+    poster: PropTypes.string.isRequired,
+    fullLine: PropTypes.string.isRequired,
+    director: PropTypes.string.isRequired,
+    audio: PropTypes.string.isRequired,
+  }),
 };
 
 export default MovieSceneDetail;

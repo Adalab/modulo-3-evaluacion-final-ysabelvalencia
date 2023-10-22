@@ -1,4 +1,4 @@
-import React from 'react';
+import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 
 const MovieSceneItem = ({ movie }) => {
@@ -17,6 +17,16 @@ const MovieSceneItem = ({ movie }) => {
       </Link>
     </>
   );
+};
+
+MovieSceneItem.propTypes = {
+  movie: PropTypes.shape({
+    id: PropTypes.number.isRequired,
+    movie: PropTypes.string.isRequired,
+    poster: PropTypes.string.isRequired,
+    fullLine: PropTypes.string.isRequired,
+    year: PropTypes.number.isRequired,
+  }).isRequired,
 };
 
 export default MovieSceneItem;

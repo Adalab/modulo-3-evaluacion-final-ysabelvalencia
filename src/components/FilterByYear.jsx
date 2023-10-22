@@ -1,4 +1,4 @@
-import React from 'react';
+import PropTypes from 'prop-types';
 
 const FilterByYear = ({ yearFilter, handleChangeSelect, years }) => {
   const handleSelect = (ev) => {
@@ -31,6 +31,12 @@ const FilterByYear = ({ yearFilter, handleChangeSelect, years }) => {
       </label>
     </>
   );
+};
+
+FilterByYear.propTypes = {
+  yearFilter: PropTypes.string.isRequired,
+  handleChangeSelect: PropTypes.func.isRequired,
+  years: PropTypes.arrayOf(PropTypes.number).isRequired,
 };
 
 export default FilterByYear;

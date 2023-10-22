@@ -1,4 +1,4 @@
-import React from 'react';
+import PropTypes from 'prop-types';
 
 const FilterByTitle = ({ titleFilter, handleChangeInput }) => {
   const handleInput = (ev) => {
@@ -17,6 +17,11 @@ const FilterByTitle = ({ titleFilter, handleChangeInput }) => {
       />
     </label>
   );
+};
+
+FilterByTitle.propTypes = {
+  titleFilter: PropTypes.string.isRequired,
+  handleChangeInput: PropTypes.func.isRequired,
 };
 
 export default FilterByTitle;
