@@ -5,8 +5,7 @@ Hey there! Welcome to the "Owen Wilson's wow! " website!
 
 This is a tribute to the renowned american actor Owen Wilson and his iconic catchphrase "Wow." 
 
-This website is also,¡ the final project for Module 3 (React) of the Adalab Front Devel as assigned by the Adalab instructors.
-
+This website serves as the final project for Module 3 (React) of the Adalab Front-End Developer Bootcamp.
 
 ## How to Use:
 - Access the Website: Visit the "Owen Wilson's Wow Compilation" and enjoy a collection of 50 movies featuring Owen Wilson and his memorable "Wow" moments.
@@ -97,3 +96,5 @@ then open de url generated or press h + o.
 ## Author
 
 [![Autor](https://img.shields.io/badge/-%20Ysabel%20Valencia%20-%20pink?logo=github&labelColor=grey&color=rgb(59%2C%202%2C%2061))](https://github.com/ysabelvalencia)
+
+I hope you enjoy it!
