@@ -1,0 +1,25 @@
+@import '../core/Variables.scss';
+@import '../core/Mixins.scss';
+
+.scene-item {
+  text-decoration: none;
+  @include dflex(column, center, center, 2rem);
+  text-align: center;
+
+  &__image {
+    width: 13rem;
+  }
+
+  &__title {
+    @include fonts(1.2rem, white, 500);
+    text-transform: uppercase;
+  }
+
+  &__line {
+    @include fonts(1rem, white, 400);
+  }
+
+  &__year {
+    @include fonts(1rem, white, 400);
+  }
+}

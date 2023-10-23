@@ -1,12 +1,13 @@
 import MovieSceneItem from './MovieSceneItem';
 import PropTypes from 'prop-types';
+import '../styles/layout/MovieSceneList.scss';
 
 const MovieSceneList = ({ filteredMovies, titleFilter, yearFilter }) => {
   if (filteredMovies.length === 0) {
     if (titleFilter !== '' && yearFilter === '') {
       return (
-        <section>
-          <p>
+        <section className="section">
+          <p className="section__error">
             No hay ningun nombre de película que coincida con la palabra "
             {titleFilter}".
           </p>
@@ -14,8 +15,8 @@ const MovieSceneList = ({ filteredMovies, titleFilter, yearFilter }) => {
       );
     } else {
       return (
-        <section>
-          <p>
+        <section className="section">
+          <p className="section__error">
             No hay ninguna nombre de película que coincida con la palabra "
             {titleFilter}" y el año seleccionado.
           </p>
@@ -26,15 +27,15 @@ const MovieSceneList = ({ filteredMovies, titleFilter, yearFilter }) => {
 
   const renderAllMovies = filteredMovies.map((movie) => {
     return (
-      <li key={movie.id}>
+      <li className="section-all__list" key={movie.id}>
         <MovieSceneItem movie={movie} />
       </li>
     );
   });
 
   return (
-    <section>
-      <ul>{renderAllMovies}</ul>
+    <section className="section">
+      <ul className="section-all">{renderAllMovies}</ul>
     </section>
   );
 };

@@ -11,5 +11,7 @@
     border-radius: 2rem;
     background-color: #052b44;
     @include fonts(1rem, white, none);
+    border: none;
+    cursor: pointer;
   }
 }

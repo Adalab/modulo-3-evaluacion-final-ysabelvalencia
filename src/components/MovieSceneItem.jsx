@@ -1,19 +1,20 @@
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
+import '../styles/layout/MovieSceneItem.scss';
 
 const MovieSceneItem = ({ movie }) => {
   return (
     <>
-      <Link to={`/movie/${movie.id}`}>
+      <Link to={`/movie/${movie.id}`} className="scene-item">
         <img
+          className="scene-item__image"
           src={movie.poster}
           alt={movie.movie}
           title={movie.movie}
-          width="100px"
         />
-        <p>{movie.movie}</p>
-        <p>{movie.fullLine}</p>
-        <p>{movie.year}</p>
+        <p className="scene-item__title">{movie.movie}</p>
+        <p className="scene-item__line">«{movie.fullLine}»</p>
+        <p className="scene-item__year">{movie.year}</p>
       </Link>
     </>
   );

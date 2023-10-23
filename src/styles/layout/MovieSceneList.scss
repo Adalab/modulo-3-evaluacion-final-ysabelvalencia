@@ -1,0 +1,33 @@
+@import '../core/Variables.scss';
+@import '../core/Mixins.scss';
+
+.section {
+  padding: 2rem;
+}
+
+.section-all {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  gap: 1rem;
+  justify-items: center;
+  align-items: center;
+  list-style: none;
+
+  @media (min-width: 768px) {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+  }
+
+  @media (min-width: 1024px) {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto;
+  }
+}
+
+.section-all__list {
+  width: 15rem;
+  background-color: #011f34;
+  padding: 1rem;
+  border-radius: 1rem;
+}

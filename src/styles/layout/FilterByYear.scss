@@ -2,7 +2,27 @@
 @import '../core/Mixins.scss';
 
 .search-year {
-  border: 0.1rem solid red;
-  // padding: 1rem;
-  @include dflex(row, center, flex-end, none);
+  @include dflex(row, center, center, 0.5rem);
+
+  &__select {
+    @include fonts(1rem, none, 400);
+    padding: 0.5rem;
+    border-radius: 1rem;
+    border: solid 0.1rem #ed9b04;
+    color: rgb(231, 198, 66);
+    cursor: pointer;
+
+    &:hover {
+      background-color: #ed9b04;
+      color: white;
+    }
+
+    &--option {
+      color: white;
+      text-align: center;
+      @include fonts(1rem, none, 400);
+      border: none;
+      cursor: pointer;
+    }
+  }
 }
