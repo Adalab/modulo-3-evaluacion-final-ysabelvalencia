@@ -5,9 +5,13 @@ import '../styles/layout/MovieSceneDetail.scss';
 const MovieSceneDetail = ({ selectedMovie }) => {
   if (!selectedMovie) {
     return (
-      <div>
-        <p>La escena que buscas no existe</p>
-        <Link to="/">Volver</Link>
+      <div className="sectionD-error">
+        <p className="sectionD-error__message">
+          La escena que buscas no existe.
+        </p>
+        <Link className="sectionD-error__return" to="/">
+          <i class="sectionD-error__return--home fa-solid fa-house home"></i>
+        </Link>
       </div>
     );
   }
