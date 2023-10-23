@@ -6,8 +6,8 @@ const MovieSceneList = ({ filteredMovies, titleFilter, yearFilter }) => {
   if (filteredMovies.length === 0) {
     if (titleFilter !== '' && yearFilter === '') {
       return (
-        <section className="section">
-          <p className="section__error">
+        <section className="section-error">
+          <p className="section-error__message">
             No hay ningun nombre de película que coincida con la palabra "
             {titleFilter}".
           </p>
@@ -15,8 +15,8 @@ const MovieSceneList = ({ filteredMovies, titleFilter, yearFilter }) => {
       );
     } else {
       return (
-        <section className="section">
-          <p className="section__error">
+        <section className="section-error">
+          <p className="section-error__message">
             No hay ninguna nombre de película que coincida con la palabra "
             {titleFilter}" y el año seleccionado.
           </p>

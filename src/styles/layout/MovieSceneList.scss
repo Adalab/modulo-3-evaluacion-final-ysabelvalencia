@@ -1,11 +1,12 @@
 @import '../core/Variables.scss';
 @import '../core/Mixins.scss';
 
-.section {
+.section-error {
   padding: 2rem;
+  height: 12rem;
 
-  &__error {
-    @include fonts(1rem, white, 400);
+  &__message {
+    @include fonts(1.5rem, white, 400);
     text-align: center;
     line-height: 1.5rem;
   }
@@ -15,10 +16,11 @@
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: auto;
-  gap: 1rem;
+  gap: 4rem;
   justify-items: center;
   align-items: center;
   list-style: none;
+  padding-bottom: 3rem;
 
   @media (min-width: 768px) {
     grid-template-columns: 1fr 1fr;
@@ -33,7 +35,12 @@
 
 .section-all__list {
   width: 15rem;
-  background-color: #011f34;
+  background-color: #00415a;
   padding: 1rem;
   border-radius: 1rem;
+  box-shadow: 2px 2px 4px rgb(179, 161, 92);
+
+  &:hover {
+    transform: scale(110%);
+  }
 }

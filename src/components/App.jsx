@@ -81,7 +81,7 @@ const App = () => {
         <h1 className="title-one">Owen Wilson's</h1>
         <p className="title-two">❝wow!❞</p>
       </header>
-      <main>
+      <main className="main">
         <Routes>
           <Route
             path="/"

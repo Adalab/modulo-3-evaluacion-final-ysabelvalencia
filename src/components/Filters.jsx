@@ -29,7 +29,7 @@ const Filters = ({
       />
 
       <button className="form__button" onClick={handleReset}>
-        Reset
+        <i class="form__button--trash fa-solid fa-trash-can fa-2xl"></i>
       </button>
     </form>
   );

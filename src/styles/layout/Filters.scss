@@ -2,16 +2,24 @@
 @import '../core/Mixins.scss';
 
 .form {
-  padding: 1rem;
+  padding: 3rem 0rem;
   @include dflex(column, center, center, 1rem);
   @include fonts(1.5rem, white, none);
 
+  @media (min-width: 768px) {
+    @include dflex(row, center, center, 2rem);
+  }
+
   &__button {
     padding: 0.5rem;
-    border-radius: 2rem;
-    background-color: #052b44;
+    background-color: #000012;
     @include fonts(1rem, white, none);
     border: none;
     cursor: pointer;
+    text-align: right;
+
+    &--trash {
+      font-size: 1.5rem;
+    }
   }
 }

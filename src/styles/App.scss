@@ -9,21 +9,20 @@
 htlm {
   font-size: 62.5%;
 }
-.body {
-  background-color: #539baa;
-}
 
 .header {
-  background-image: url('../images/owen-paris.jpg');
+  height: 60vh;
+  background-image: url('../images/prueba-cuatro.jpeg');
   background-repeat: no-repeat;
-  background-position-x: 25%;
+  background-size: cover;
+  background-position-x: 47%;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   align-items: self-end;
   font-family: $font-josefin;
   font-size: 2rem;
-  text-shadow: 2px 2px 4px rgb(251, 229, 81);
+  text-shadow: 2px 2px 4px #ed9b04;
   color: rgb(1, 1, 34);
   padding: 1rem;
 
@@ -45,8 +44,12 @@ htlm {
   }
 }
 
+.main {
+  background-color: #000012;
+}
+
 .footer {
-  background-color: #044978;
+  background: linear-gradient(to top, #ed9b04, #6a5204);
   font-family: $font-josefin;
   font-size: 1rem;
 

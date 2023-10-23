@@ -2,7 +2,7 @@
 @import '../core/Mixins.scss';
 
 .search-year {
-  @include dflex(row, center, center, 0.5rem);
+  @include dflex(column, center, center, 0.5rem);
 
   &__select {
     @include fonts(1rem, none, 400);

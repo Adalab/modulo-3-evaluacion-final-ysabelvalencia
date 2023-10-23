@@ -10,7 +10,8 @@
   @include dflex(column, center, center, 1rem);
   padding: 2rem;
   border-radius: 1rem;
-  background-color: rgb(242, 237, 228);
+  background-color: #00415a;
+  box-shadow: 2px 2px 4px rgb(179, 161, 92);
 
   @media (min-width: 768px) {
     @include dflex(row, space-evenly, center, 1rem);
@@ -38,7 +39,7 @@
     }
 
     &--title {
-      @include fonts(1.2rem, #ed9b04, 700);
+      @include fonts(1.2rem, white, 700);
       text-transform: uppercase;
       text-align: center;
 
@@ -58,7 +59,7 @@
     }
 
     &--director {
-      @include fonts(1rem, #ed9b04, 700);
+      @include fonts(1rem, white, 700);
 
       @media (min-width: 768px) {
         font-size: 1.5rem;
@@ -66,16 +67,42 @@
     }
 
     &--audio {
-      @include fonts(1rem, #ed9b04, 400);
+      @include fonts(1rem, white, 400);
       text-decoration: none;
       cursor: pointer;
 
       &:hover {
         text-decoration: underline;
+        color: #ed9b04;
       }
 
       @media (min-width: 768px) {
         font-size: 1.5rem;
+      }
+    }
+  }
+
+  &__return {
+    @media (min-width: 768px) {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      height: 40rem;
+      text-decoration: none;
+    }
+
+    @media (min-width: 1024px) {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      height: 30rem;
+    }
+    .home {
+      font-size: 1.5rem;
+      color: #09081f;
+      &:hover {
+        color: #ed9b04;
+        transform: scale(120%);
       }
     }
   }

@@ -27,7 +27,7 @@ const MovieSceneDetail = ({ selectedMovie }) => {
             «{selectedMovie.fullLine}»
           </p>
           <p className="section-detail__box--director">
-            {selectedMovie.director}
+            <i class="fa-solid fa-film"></i> {selectedMovie.director}
           </p>
           <a
             className="section-detail__box--audio"
@@ -36,11 +36,11 @@ const MovieSceneDetail = ({ selectedMovie }) => {
             target="_blank"
             rel="noreferrer"
           >
-            Escuchar escena
+            <i class="fa-solid fa-circle-play"></i> Escuchar escena
           </a>
         </div>
         <Link className="section-detail__return" to="/">
-          Volver
+          <i class="fa-solid fa-house home"></i>
         </Link>
       </div>
     </section>
