@@ -79,7 +79,7 @@ const App = () => {
     <>
       <header className="header">
         <h1 className="title-one">Owen Wilson's</h1>
-        <p className="title-two">"wow!"</p>
+        <p className="title-two">❝wow!❞</p>
       </header>
       <main>
         <Routes>

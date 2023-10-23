@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
+import '../styles/layout/MovieSceneDetail.scss';
 
 const MovieSceneDetail = ({ selectedMovie }) => {
   if (!selectedMovie) {
@@ -12,27 +13,36 @@ const MovieSceneDetail = ({ selectedMovie }) => {
   }
 
   return (
-    <section>
-      <img
-        src={selectedMovie.poster}
-        alt={selectedMovie.movie}
-        title={selectedMovie.movie}
-        width="100px"
-      />
-      <div>
-        <h2>{selectedMovie.movie}</h2>
-        <p>{selectedMovie.fullLine}</p>
-        <p>{selectedMovie.director}</p>
-        <a
-          href={selectedMovie.audio}
-          title="Wow audio"
-          target="_blank"
-          rel="noreferrer"
-        >
-          Escuchar "wow"
-        </a>
+    <section className="sectionD">
+      <div className="section-detail">
+        <img
+          className="section-detail__image"
+          src={selectedMovie.poster}
+          alt={selectedMovie.movie}
+          title={selectedMovie.movie}
+        />
+        <div className="section-detail__box">
+          <h2 className="section-detail__box--title">{selectedMovie.movie}</h2>
+          <p className="section-detail__box--line">
+            «{selectedMovie.fullLine}»
+          </p>
+          <p className="section-detail__box--director">
+            {selectedMovie.director}
+          </p>
+          <a
+            className="section-detail__box--audio"
+            href={selectedMovie.audio}
+            title="Wow audio"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Escuchar escena
+          </a>
+        </div>
+        <Link className="section-detail__return" to="/">
+          Volver
+        </Link>
       </div>
-      <Link to="/">Volver</Link>
     </section>
   );
 };

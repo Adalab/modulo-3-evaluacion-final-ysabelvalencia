@@ -1,0 +1,82 @@
+@import '../core/Variables.scss';
+@import '../core/Mixins.scss';
+
+.sectionD {
+  padding: 2rem;
+  @include dflex(row, center, center, none);
+}
+
+.section-detail {
+  @include dflex(column, center, center, 1rem);
+  padding: 2rem;
+  border-radius: 1rem;
+  background-color: rgb(242, 237, 228);
+
+  @media (min-width: 768px) {
+    @include dflex(row, space-evenly, center, 1rem);
+    height: 47rem;
+  }
+
+  @media (min-width: 1024px) {
+    height: 35rem;
+    width: 60rem;
+  }
+
+  &__image {
+    width: 13rem;
+
+    @media (min-width: 768px) {
+      width: 20rem;
+    }
+  }
+
+  &__box {
+    @include dflex(column, center, center, 1rem);
+
+    @media (min-width: 768px) {
+      gap: 2.5rem;
+    }
+
+    &--title {
+      @include fonts(1.2rem, #ed9b04, 700);
+      text-transform: uppercase;
+      text-align: center;
+
+      @media (min-width: 768px) {
+        font-size: 2rem;
+      }
+    }
+
+    &--line {
+      @include fonts(1.5rem, #ed9b04, 700);
+      font-style: italic;
+      text-align: center;
+
+      @media (min-width: 768px) {
+        font-size: 2rem;
+      }
+    }
+
+    &--director {
+      @include fonts(1rem, #ed9b04, 700);
+
+      @media (min-width: 768px) {
+        font-size: 1.5rem;
+      }
+    }
+
+    &--audio {
+      @include fonts(1rem, #ed9b04, 400);
+      text-decoration: none;
+      cursor: pointer;
+
+      &:hover {
+        text-decoration: underline;
+      }
+
+      @media (min-width: 768px) {
+        font-size: 1.5rem;
+      }
+    }
+  }
+}

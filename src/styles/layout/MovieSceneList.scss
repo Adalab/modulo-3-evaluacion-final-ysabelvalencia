@@ -3,6 +3,12 @@
 
 .section {
   padding: 2rem;
+
+  &__error {
+    @include fonts(1rem, white, 400);
+    text-align: center;
+    line-height: 1.5rem;
+  }
 }
 
 .section-all {
