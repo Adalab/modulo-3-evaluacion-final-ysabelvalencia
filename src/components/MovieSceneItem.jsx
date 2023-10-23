@@ -12,7 +12,7 @@ const MovieSceneItem = ({ movie }) => {
           alt={movie.movie}
           title={movie.movie}
         />
-        <p className="scene-item__title">{movie.movie}</p>
+        <h2 className="scene-item__title">{movie.movie}</h2>
         <p className="scene-item__line">«{movie.fullLine}»</p>
         <p className="scene-item__year">{movie.year}</p>
       </Link>

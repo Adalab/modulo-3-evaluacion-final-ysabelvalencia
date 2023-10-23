@@ -113,12 +113,14 @@ const App = () => {
           <Route
             path="/*"
             element={
-              <>
-                <p>
+              <section className="page-error">
+                <p className="page-error__message">
                   Upps! Parece que la ruta que has introducido no es correcta.
                 </p>
-                <Link to="/">Volver al Inicio</Link>
-              </>
+                <Link className="page-error__return" to="/">
+                  <i class="page-error__return--home fa-solid fa-house home"></i>
+                </Link>
+              </section>
             }
           />
         </Routes>

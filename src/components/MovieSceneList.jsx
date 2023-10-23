@@ -17,7 +17,7 @@ const MovieSceneList = ({ filteredMovies, titleFilter, yearFilter }) => {
       return (
         <section className="section-error">
           <p className="section-error__message">
-            No hay ninguna nombre de película que coincida con la palabra "
+            No hay ningun nombre de película que coincida con la palabra "
             {titleFilter}" y el año seleccionado.
           </p>
         </section>
